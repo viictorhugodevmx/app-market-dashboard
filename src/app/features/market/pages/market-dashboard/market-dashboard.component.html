@@ -1,9 +1,17 @@
-<div class="market-container">
+<div class="market-container" [class.dark-mode]="isDarkMode">
 
   <header class="market-header">
     <h1>Fintech Market Dashboard</h1>
     <p>Real-time crypto market overview</p>
   </header>
+
+  <div class="toolbar">
+
+    <button (click)="toggleDarkMode()">
+      {{ isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode' }}
+    </button>
+
+  </div>
 
   <div class="market-movers">
 

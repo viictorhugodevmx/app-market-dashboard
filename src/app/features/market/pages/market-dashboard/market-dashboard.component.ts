@@ -28,6 +28,7 @@ export class MarketDashboardComponent implements OnInit, OnDestroy {
   sortDirection: 'asc' | 'desc' = 'asc'
   loading = false
   error = false
+  isDarkMode: boolean = false
 
   lastUpdated: Date | null = null
 
@@ -161,6 +162,12 @@ constructor(
       coin.name.toLowerCase().includes(term) ||
       coin.symbol.toLowerCase().includes(term)
     )
+
+  }
+
+  toggleDarkMode() {
+
+    this.isDarkMode = !this.isDarkMode
 
   }
 

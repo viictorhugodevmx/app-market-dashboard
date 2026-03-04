@@ -183,3 +183,48 @@ th:hover {
   font-size: 14px;
 
 }
+
+.toolbar {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+
+}
+
+.toolbar button {
+
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #1e88e5;
+  color: white;
+  cursor: pointer;
+
+}
+
+.dark-mode {
+
+  background: #0f172a;
+  color: #e5e7eb;
+
+}
+
+.dark-mode table {
+
+  background: #1e293b;
+  color: #e5e7eb;
+
+}
+
+.dark-mode th {
+
+  background: #111827;
+
+}
+
+.dark-mode td {
+
+  border-bottom: 1px solid #334155;
+
+}
