@@ -1,1 +1,64 @@
-<p>market-dashboard works!</p>
+<div class="market-container">
+
+  <header class="market-header">
+    <h1>Fintech Market Dashboard</h1>
+    <p>Real-time crypto market overview</p>
+  </header>
+
+  <div class="market-card">
+
+    <div *ngIf="loading" class="loading">
+      Loading market data...
+    </div>
+
+    <div *ngIf="error" class="error">
+      Error loading market data
+    </div>
+
+    <table *ngIf="!loading && !error">
+
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Coin</th>
+          <th>Price</th>
+          <th>24h %</th>
+          <th>Volume</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr *ngFor="let coin of coins">
+
+          <td>{{ coin.market_cap_rank }}</td>
+
+          <td class="coin-cell">
+            <img [src]="coin.image">
+            <span>{{ coin.name }}</span>
+          </td>
+
+          <td>
+            {{ coin.current_price | currency:'USD' }}
+          </td>
+
+          <td
+            [class.positive]="coin.price_change_percentage_24h >= 0"
+            [class.negative]="coin.price_change_percentage_24h < 0"
+          >
+            {{ coin.price_change_percentage_24h | number:'1.2-2' }} %
+          </td>
+
+          <td>
+            {{ coin.total_volume | number }}
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
