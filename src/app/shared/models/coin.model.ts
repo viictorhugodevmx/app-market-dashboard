@@ -1,4 +1,5 @@
 export interface Coin {
+
   id: string
   symbol: string
   name: string
@@ -8,4 +9,9 @@ export interface Coin {
   market_cap_rank: number
   total_volume: number
   price_change_percentage_24h: number
+
+  sparkline_in_7d: {
+    price: number[]
+  }
+
 }

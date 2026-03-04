@@ -102,3 +102,84 @@ td {
   color: red;
 
 }
+
+.market-info {
+
+  margin-bottom: 15px;
+  color: #777;
+  font-size: 13px;
+
+}
+
+th {
+
+  cursor: pointer;
+  user-select: none;
+
+}
+
+th:hover {
+
+  color: #2962ff;
+
+}
+
+.market-movers {
+
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+
+}
+
+.mover-card {
+
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
+}
+
+.mover-row {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+
+}
+
+.star {
+
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+
+.star:hover {
+
+  color: #f7b500;
+
+}
+
+.search-bar {
+
+  margin-bottom: 16px;
+
+}
+
+.search-bar input {
+
+  width: 280px;
+  padding: 10px 14px;
+
+  border-radius: 8px;
+  border: 1px solid #dcdfe6;
+
+  font-size: 14px;
+
+}
